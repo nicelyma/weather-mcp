@@ -1,20 +1,23 @@
 - name: get_alerts
-  description: "获取指定州当前气象预警"
+  description: 获取指定州当前的气象预警
   parameters:
     type: object
     properties:
       state:
         type: string
-        description: "美国两位州码，例如 CA, NY"
+        description: 两位州码，例如 CA、NY
     required: [state]
 
 - name: get_forecast
-  description: "获取指定坐标点未来 5 段天气预报"
+  description: 获取指定经纬度未来 5 段天气预报
   parameters:
     type: object
     properties:
       latitude:
         type: number
+        description: 纬度（十进制度）
       longitude:
         type: number
+        description: 经度（十进制度）
     required: [latitude, longitude]
+
