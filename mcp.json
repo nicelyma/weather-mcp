@@ -3,11 +3,11 @@
     "weather": {
       "command": "python",
       "args": ["weather_server.py"],
-      "env": {
-        "PYTHONUNBUFFERED": "1"
-      },
-      "port": 8080          // 告诉平台需要探活的端口
+      "port": 8080,
+      "env": { "PYTHONUNBUFFERED": "1" }
     }
-  }
+  },
+  "tools": ["tools.yaml"]
 }
+
 
