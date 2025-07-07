@@ -55,7 +55,12 @@ async def get_forecast(latitude: float, longitude: float) -> str:
     )
 
 def main() -> None:
-    mcp.run(transport="stdio")
+    # 改成 HTTP；端口 8080 与下方 mcp.json 一致
+    mcp.run(
+        transport="http",           # <- 关键：HTTP 传输
+        host="0.0.0.0",
+        port=8080
+    )
 
 if __name__ == "__main__":
     main()
